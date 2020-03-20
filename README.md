@@ -1,5 +1,6 @@
 # backend_group_project
 The second DC group project
+Tangerine team
 
 
 ## Description
