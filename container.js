@@ -20,6 +20,7 @@ container.load(path.join(__dirname,'./routes/'));
 container.load(path.join(__dirname,'./routes/login.js'));
 container.load(path.join(__dirname,'./routes/chat.js'));
 
+
 container.register('container',function() {
     return container;
 })
