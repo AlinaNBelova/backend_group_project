@@ -16,6 +16,11 @@ h1 {
     font-weight: 700;
     line-height: 26.4px; 
 } 
+h2 { 
+    font-family: "Allerta Stencil";
+    font-size: 14px; font-style: normal;
+    font-variant: normal; font-weight: 700; line-height: 15.4px;
+}
 h3 { 
     font-family: "Allerta Stencil";
     font-size: 14px; font-style: normal;
@@ -85,7 +90,7 @@ pre {
     overflow: hidden;
     text-align: center;
     background: #16a085;
-    padding: 60px;
+    padding: 23px;
     min-height: 100vh;
     
 }
@@ -112,9 +117,10 @@ pre {
 }
 
 .ps a img{
-    width: 100%;
+    max-width: 100%;
     filter: grayscale(100%);
     transition: 0.4s;
+    /* height: auto; */
 }
 
 .ps a:hover > img{
@@ -122,7 +128,7 @@ pre {
 }
 
 .section{
-    width: 600px;
+    /* width: 600px; */
     margin: auto;
     font-size: 20px;
     color: white;
