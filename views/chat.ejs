@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>BLOCK-22</title>
 </head>
 <body>
-    chat goes here
+	<div id="container">
+		<div id="namesWrapper">
+			<h2>BLOCK-22</h2>
+			<p>Create Username:</p>
+			<div id="error"></div>
+			<form id="usernameForm">
+				<input type="text" size="35" id="username">
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+
+		<div id="mainWrapper">
+			<h2>BLOCK-22</h2>
+			<div id="chatWrapper">
+				<div id="chatWindow"></div>
+				<form id="messageForm">
+					<input type="text" size="35" id="message" placeholder="Say Something...">
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+
+			<div id="userWrapper">
+				<div id="users"></div>
+			</div>
+		</div>
+    </div>
+    
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
 </body>
 </html>
