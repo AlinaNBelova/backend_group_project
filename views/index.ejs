@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Block-22 Chat App</title>
-    <!-- <link rel="stylesheet" href="/public/css/signup.css"> -->
     <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
-    <!-- <script type="text/javascript" src="/public/js/signup.js"></script> -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Allerta+Stencil" />
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
-<!-- Nav Bar  -->
 
-    <div class="navbar">
+<!-- ***Nav Bar Section***  -->
+
+    <div class="navbar" id='myNavbar'>
         <a class="active" href="/">Home</a>
         <a href="/signup">Sign Up</a>
         <a href="/chat">Chat</a>
-      </div>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </div>
+
 
 <!-- ***Banner Section*** -->
     <header class="header">
@@ -136,6 +140,17 @@
 </div>
 
 </div>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myNavbar");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
 
 <!-- ***Button Section*** -->
 
