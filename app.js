@@ -7,7 +7,8 @@ const cookieParser = require('cookie-parser');
 const validator = require('express-validator');
 const session = require('express-session');
 const container = require('./container');
-const chat = require('http').createServer(app),
+const chat = require('http').createServer(app);
+
 io = require('socket.io').listen(chat);
 usernames = [];
 
@@ -17,22 +18,26 @@ container.resolve(function(users) {
   function SetupExpress(){
       const app = express();
       const app2 = http.createServer(app);
+      configureExpress(app);
+      app.get("/", (req,res) => {
+      res.render("index")
+    })
+      const router = require('express-promise-router') ();
+      users.SetRouting(router);
+      app.use(router)
+      
       app.listen(3000,() => {
           console.log('Listening on port 3000');
           
       });
-      configureExpress(app);
-      const router = require('express-promise-router') ();
-      users.SetRouting(router);
-  
-      app.use(router)
+     
       
   }
 
 
   function configureExpress(app){
-      app.use(express.static('public'));
-      app.use(cookieParser());
+    app.use(express.static("public"));
+    app.use(cookieParser());
       app.set('view engine', 'ejs');
       app.use(bodyParser.json());
       app.use(bodyParser.urlencoded({extended:true}));
@@ -50,7 +55,7 @@ container.resolve(function(users) {
 
 
 app.get('/', function(req, res){
-	res.sendFile(__dirname + './routes/chat.js');
+    res.sendFile(__dirname + './routes/chat.js');
 });
 
 io.sockets.on('connection',(socket)=>{
