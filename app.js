@@ -67,17 +67,14 @@ io.sockets.on('connection',(socket)=>{
 		}
 	});
 
-	// Update Usernames
 	function updateUsernames(){
 		io.sockets.emit('usernames', usernames);
 	}
 
-	// Send Message
 	socket.on('send message', (data)=>{
 		io.sockets.emit('new message', {msg: data, user:socket.username});
 	});
 
-	// Disconnect
 	socket.on('disconnect',(data)=>{
 		if(!socket.username){
 			return;
