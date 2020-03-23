@@ -7,6 +7,9 @@ const cookieParser = require('cookie-parser');
 const validator = require('express-validator');
 const session = require('express-session');
 const container = require('./container');
+const chat = require('http').createServer(app),
+io = require('socket.io').listen(chat);
+usernames = [];
 
 container.resolve(function(users) {
   const app = SetupExpress();
@@ -44,3 +47,43 @@ container.resolve(function(users) {
 
   }
 })
+
+
+app.get('/', function(req, res){
+	res.sendFile(__dirname + './routes/chat.js');
+});
+
+io.sockets.on('connection',(socket)=>{
+	console.log('Socket Connected...');
+
+	socket.on('new user',(data, callback)=>{
+		if(usernames.indexOf(data) != -1){
+			callback(false);
+		} else {
+			callback(true);
+			socket.username = data;
+			usernames.push(socket.username);
+			updateUsernames();
+		}
+	});
+
+	// Update Usernames
+	function updateUsernames(){
+		io.sockets.emit('usernames', usernames);
+	}
+
+	// Send Message
+	socket.on('send message', (data)=>{
+		io.sockets.emit('new message', {msg: data, user:socket.username});
+	});
+
+	// Disconnect
+	socket.on('disconnect',(data)=>{
+		if(!socket.username){
+			return;
+		}
+
+		usernames.splice(usernames.indexOf(socket.username), 1);
+		updateUsernames();
+	});
+});
