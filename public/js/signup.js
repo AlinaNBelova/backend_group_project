@@ -25,8 +25,6 @@ function cambiar_login() {
   
   }    
   
-  
-  
   function ocultar_login_sign_up() {
   
   document.querySelector('.cont_forms').className = "cont_forms";  

@@ -5,6 +5,7 @@ module.exports = function(_){
         SetRouting: function(router){
             router.get('/', this.indexPage);
             router.get('/signup', this.getSignUp);
+            router.get('/chat', this.chatRoom)
             
                 
             },
@@ -15,7 +16,11 @@ module.exports = function(_){
 
             getSignUp: (req,res) => {
                 return res.render('signup');
-            }
+            },
             
+            chatRoom: (req,res) => {
+                return res.render('chat');
+                
+            }
         }
     }
