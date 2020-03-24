@@ -71,11 +71,7 @@ io.sockets.on('connection',(socket)=>{
 });
 
 
-
-app.listen(PORT, () => {
+chat.listen(PORT, () => {
     console.log(`Server is live at http://localhost:${PORT}`);
 });
 
-chat.listen(3001, () => {
-    console.log('chat is running');
-});
