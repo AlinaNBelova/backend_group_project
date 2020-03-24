@@ -84,3 +84,16 @@ input{
     height:30px;
     border:solid 1px #ccc;
 }
+
+footer{
+    background: #1abc9c;
+    display: block;
+    text-align: center;
+    color: 2ecc71;
+    padding: 2em;
+    margin-top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
