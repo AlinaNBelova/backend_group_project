@@ -8,9 +8,9 @@ const validator = require('express-validator');
 const session = require('express-session');
 const container = require('./container');
 const chat = require('http').createServer(app);
-
 io = require('socket.io').listen(chat);
 usernames = [];
+
 
 container.resolve(function(users) {
   const app = SetupExpress();
@@ -82,7 +82,7 @@ io.sockets.on('connection',(socket)=>{
 
 	socket.on('disconnect',(data)=>{
 		if(!socket.username){
-			return;
+			return "";
 		}
 
 		usernames.splice(usernames.indexOf(socket.username), 1);
