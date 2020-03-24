@@ -6,7 +6,6 @@ module.exports = function(_){
             router.get('/', this.indexPage);
             router.get('/signup', this.getSignUp);
             router.get('/chat', this.chatRoom)
-            
                 
             },
             indexPage: (req,res) => {
