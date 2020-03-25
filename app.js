@@ -16,8 +16,8 @@ const fetch = require('node-fetch');
 
 let genesisBlock = new Block();
 let blockchain = new Blockchain(genesisBlock);
-let transactions = [];  //list of Transaction objects 
-let nodes = []; //list of BlockchainNode objects
+let transactions = [];  
+let nodes = []; 
 
 
 
@@ -80,16 +80,6 @@ io.sockets.on('connection',(socket)=>{
 
 app.get('/resolve', (req, res) => {
 
-    //anytime a node has to resolve the block chain, it will call this route
-    // before any node mines, call the resove path
-    // nodes is a collection with all of the nodes on the network
-
-    //1. loop through out nodes 
-    //fetch to node.url/blockchain 
-    // compare the length of the current blockchain length with the other nodes 
-    // if the length is greater than the current node, then replace the blockchain 
-    // node[0].url = "localhost:3001"
-
     console.log(nodes);
     nodes.forEach(node => {
 
@@ -106,7 +96,6 @@ app.get('/resolve', (req, res) => {
                 res.send(blockchain)
             })
     })
-    //larger blockchain wins over the smaller blockchain
 })
 
 app.get('/nodes', (req, res) => {
@@ -128,21 +117,17 @@ app.post('/nodes/register', (req, res) => {
 
 app.get('/blockchain', (req, res) => {
 
-    //create genesis block
 
     res.json(blockchain);
 })
 
 app.post('/transactions', (req, res) => {
 
-    //this info comes from an ejs form. and submitted using post method
     let user = req.body.user;
     let msg = req.body.msg;
 
-    //create a Transaction object
     let transaction = new Transaction(user, msg);
 
-    //store in the transactions list 
     transactions.push(transaction);
 
     res.json(transactions);
