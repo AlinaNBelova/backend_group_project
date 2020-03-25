@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/chat.css">
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Allerta+Stencil" />
+    <title>BLOCK-22</title>
+</head>
+
+<body>
+
+	<!-- ***Nav Bar***  -->
+
+    <div class="navbar">
+        <a class="active" href="/">Home</a>
+	</div>
+
+	<div id="container">
+		<div id="namesWrapper">
+			<h2>BLOCK-22</h2>
+			<p>Create Username:</p>
+			<div id="error"></div>
+			<form id="usernameForm">
+				<input type="text" size="35" name ="user" id="username">
+				<input type="submit" value="Submit">
+			</form>
+		</div>
+
+		<div id="mainWrapper">
+			<h2>BLOCK-22</h2>
+			<div id="chatWrapper">
+				<div id="chatWindow"></div>
+				<form method ="POST" id="messageForm">
+					<input type="text" size="35" id="message" name="msg" placeholder="Say Something...">
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+
+			<div id="userWrapper">
+				<div id="users"></div>
+			</div>
+		</div>
+
+	</div>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+
+	<!-- ***Footer Section*** -->
+
+<footer>  © 2020 BLOCK-22, Org. <br> <i>Powered by Blockchain</i> </footer>
+
+    </div>
+
+
+	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script src="/js/chat.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+
+
+	
+</body>
+
+</html>

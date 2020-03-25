@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/signup.css" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Allerta+Stencil" />
+
+  </head>
+
+<body class="team-section">
+
+  	<!-- ***Nav Bar***  -->
+
+    <div class="navbar">
+      <a class="active" href="/">Home</a>
+  </div>
+
+    <div class="cotn_principal">
+        <div class="cont_centrar">
+
+          <div class="cont_login">
+        <div class="cont_info_log_sign_up">
+              <div class="col_md_login">
+        <div class="cont_ba_opcitiy">
+
+                <h2>LOGIN</h2>  
+
+
+          <p>Thank you for your service</p> 
+
+          <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+          </div>
+          </div>
+        <div class="col_md_sign_up">
+        <div class="cont_ba_opcitiy">
+          <h2>First Time</h2>
+
+          <p>Registration is quick and easy</p>
+        
+          <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+        </div>
+          </div>
+              </div>
+
+
+            <div class="cont_back_info">
+              <div class="cont_img_back_grey">
+              <img src="https://i.pinimg.com/originals/2d/a3/f8/2da3f81ae51d32d9a8770fabe48bb770.jpg" alt="" />
+              </div>
+
+            </div>
+        <div class="cont_forms" >
+            <div class="cont_img_back_">
+              <img src="https://i.pinimg.com/originals/2d/a3/f8/2da3f81ae51d32d9a8770fabe48bb770.jpg" alt="" />
+              </div>
+        <div class="cont_form_login">
+        <a href="#" onclick="ocultar_login_sign_up()" ><i class="material-icons">&#xE5C4;</i></a>
+          <h2>Welcome back Responder</h2>
+        <input type="text" placeholder="Responder Email" />
+        <input type="password" placeholder="Responder Password" />
+        <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
+            <h2>Having a crisis?</h2>
+            <p>Talk to someone now, your identity is anonymous</p>
+        <button class="btn_login" onclick="cambiar_login()">Chat Now</button>
+          </div>
+
+          <div class="cont_form_sign_up">
+        <!-- <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a> -->
+        <a href="#" onclick="ocultar_login_sign_up()">X</a>
+            <h2>SIGN UP</h2>
+    
+        <form method="POST" action="/signup">
+          
+          <input type="text" name="email" placeholder="Email" />
+          <input type="text" placeholder="User" />
+          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Confirm Password" />
+          <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+        </form>
+        <div class="facebook-google">
+          <a href='https://api.id.me/oauth/authorize?client_id=ca9fda04faffd807bc3d5a3462d0b22f&redirect_uri=https://verify.example.local/callback&response_type=code&scope=military'>
+            <button>Click me</button></a><script src='https://s3.amazonaws.com/idme/developer/idme-buttons/assets/js/idme-wallet-button.js'></script>
+        </div>
+        
+
+
+          </div>
+        
+            </div>
+            
+          </div>
+        </div>
+        </div>
+
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    <script src="../js/signup.js"></script>
+    <!-- ***Footer Section*** -->
+
+<footer>  © 2020 BLOCK-22, Org. <br> <i>Powered by Blockchain</i> </footer>
+
+
+</body>
+
+</html>

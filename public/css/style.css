@@ -1,0 +1,301 @@
+/* The first element, *{ }, is called a CSS reset technique. Different browsers use different default margins,
+ causing sites to look different by margins. The * means "all elements" (a universal selector),
+  so we are setting all elements to have zero margins, and zero padding, thus making them look the same in all browsers. */
+
+  *{          
+    margin: 0;
+    padding: 0;
+}
+
+/* Allerta Stencil Font */
+
+h1 { 
+    font-family: "Allerta Stencil";
+    font-size: 24px; font-style: normal;
+    font-variant: normal;
+    font-weight: 700;
+    line-height: 26.4px; 
+} 
+h2 { 
+    font-family: "Allerta Stencil";
+    font-size: 16px; font-style: normal;
+    font-variant: normal; font-weight: 700; line-height: 15.4px;
+}
+h3 { 
+    font-family: "Allerta Stencil";
+    font-size: 16px; font-style: normal;
+    font-variant: normal; font-weight: 700; line-height: 15.4px;
+}
+h4 { 
+    font-family: "Allerta Stencil";
+    font-size: 16px; font-style: normal;
+    font-variant: normal; font-weight: 700; line-height: 15.4px;
+}
+p { 
+    font-family: "Allerta Stencil"; font-size: 14px; font-style: normal;
+    font-variant: normal; font-weight: 400; line-height: 20px; text-align: justify;
+} 
+blockquote {
+    font-family: "Allerta Stencil";
+    font-size: 21px; font-style: normal;
+    font-variant: normal; font-weight: 400; line-height: 30px;
+} 
+pre {
+    font-family: "Allerta Stencil";
+    font-size: 13px; font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 18.5714px;
+}
+
+/* Add a black background color to the top navigation */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+  /* Style the links inside the navigation bar */
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Allerta Stencil";
+
+}
+
+  /* Change the color of links on hover */
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+  /* Add a color to the active/current link */
+.navbar a.active {
+    background-color: #1abc9c;
+    color: white;
+}
+
+  /* Hide the link that should open and close the navbar on small screens */
+.navbar .icon {
+    display: none;
+}
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
+@media screen and (max-width: 600px) {
+    .navbar a:not(:first-child) {display: none;}
+    .navbar a.icon {
+        float: right;
+        display: block;
+    }
+}
+
+  /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+@media screen and (max-width: 600px) {
+    .navbar.responsive {position: relative;}
+    .navbar.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    .navbar.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* Banner-Header Section */
+
+.header{
+    overflow: hidden;
+    text-align: center;
+    background: #16a085;
+    padding: 25px;
+    min-height: 10vh;
+    
+}
+.header h1{
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 60px;
+}
+/* Body Section */
+
+.body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #16a085;
+}
+
+/* Border Section */
+
+.border{
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 3px;
+    background: #2ecc71;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+article{
+    display: block;
+    margin: auto;
+    width: 720px;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+
+/* Team-About Us Section */
+
+.team-section{
+    overflow: hidden;
+    text-align: center;
+    background: #16a085;
+    padding: 3px;
+    min-height: 100vh;
+    
+}
+
+.team-section h1{   /* Block-22 and Our Mission Titles */
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 40px;
+}
+
+
+.ps{
+    margin-bottom: 40px;   
+}
+
+.ps a{
+    display: inline-block;
+    margin: 0 30px;
+    width: 200px;
+    height: 200PX;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.ps a img{
+    max-width: 100%;
+    filter: grayscale(100%);
+    transition: 0.4s;
+    /* height: auto; */
+}
+
+.ps a:hover > img{
+    filter: none;
+}
+
+/* Team-About Us Bio names, titles, & personal bio paragraph */
+
+.section{
+    /* width: 600px; */
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    text-align: justify;
+    height: 0;
+    overflow: hidden;
+}
+
+.section:target{
+    
+    height: auto;
+}
+
+.name{
+    display: block;
+    margin: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.title{
+    display: block;
+    margin: 30px;
+    text-align: center;
+    text-transform: none;
+    font-size: 18px;
+}
+
+/* Social Media Icons */
+
+.social-media{
+    margin: auto;
+    justify-content: space-around;
+    display: flex;
+    max-width: 700px;
+    padding-bottom: 20px;
+
+}
+
+.social-media a{
+    text-decoration: none;
+    font-size: 28px;
+    color: #2ecc71;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    transition: 0.4s all;
+    line-height: 58px;
+    cursor: pointer;
+    background: #ecf0f1;
+    border-radius: 25%;
+}
+
+.social-media a:hover {
+    transform: scale(1.2);
+
+}
+
+/* Auto Scroll To The Top Button  */
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: #2ecc71;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 15px;
+    width: 60px;
+    height: 60px;
+
+}
+
+    #myBtn:hover {
+    background-color: #555;
+}
+
+/* Footer Section  */
+
+footer{
+    background: #1abc9c;
+    display: block;
+    text-align: center;
+    color: 2ecc71;
+    padding: 3em;
+    margin-top: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+}
