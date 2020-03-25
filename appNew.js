@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
-const PORT = process.env.PORT || 3000 // this needs to be changed to 8080 for heroku
+const PORT = process.env.PORT || 3001 // this needs to be changed to 8080 for heroku
 const bodyParser = require("body-parser");
 const session = require("express-session");
 const cookieParser = require("cookie-parser");
@@ -71,9 +71,7 @@ io.sockets.on('connection',(socket)=>{
 });
 
 
-
 chat.listen(PORT, () => {
     console.log(`Server is live at http://localhost:${PORT}`);
 });
-
 
