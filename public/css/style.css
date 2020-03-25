@@ -5,6 +5,17 @@
   *{          
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    position: relative;
+    widows: 100%;
+    min-height: 100vh;
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: center;
+    letter-spacing: 2px;
 }
 
 /* Allerta Stencil Font */
@@ -84,7 +95,8 @@ pre {
 }
 
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the navbar (.icon) */
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). 
+Show the link that contains should open and close the navbar (.icon) */
 @media screen and (max-width: 600px) {
     .navbar a:not(:first-child) {display: none;}
     .navbar a.icon {
@@ -93,7 +105,8 @@ pre {
     }
 }
 
-  /* The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
+  /*  The "responsive" class is added to the navbar with JavaScript when the user clicks on the icon. 
+  This class makes the navbar look good on small screens (display the links vertically instead of horizontally) */
 @media screen and (max-width: 600px) {
     .navbar.responsive {position: relative;}
     .navbar.responsive a.icon {
@@ -163,6 +176,7 @@ article{
     background: #16a085;
     padding: 3px;
     min-height: 100vh;
+    background-image: url("/BLOCK22logoblack.png");
     
 }
 
@@ -266,8 +280,8 @@ article{
 #myBtn {
     display: none;
     position: fixed;
-    bottom: 20px;
-    right: 30px;
+    bottom: 90px;
+    right: 60px;
     z-index: 99;
     font-size: 18px;
     border: none;
@@ -298,4 +312,27 @@ footer{
     left: 0;
     right: 0;
     bottom: 0;    
+}
+
+section{
+    flex-direction: column-reverse;
+    justify-content: center;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+section .content{
+    padding: 50px;
+    margin-bottom: 30px;
+}
+
+/* White Border around index page */
+
+section .header{
+    max-width: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
 }

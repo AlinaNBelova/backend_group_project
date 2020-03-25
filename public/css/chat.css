@@ -27,6 +27,34 @@
     color: white;
 }
 
+/* Banner-Header Section */
+
+.header{
+    overflow: hidden;
+    text-align: center;
+    background: #16a085;
+    padding: 25px;
+    min-height: 10vh;
+    
+}
+.header h1{
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    color: white;
+    font-size: 60px;
+}
+
+  /* Border Section */
+
+.border{
+    display: block;
+    margin: auto;
+    width: 160px;
+    height: 3px;
+    background: #2ecc71;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 body{
     margin: 0;
@@ -83,7 +111,6 @@ body{
 input{
     height:30px;
     border:solid 1px #ccc;
-<<<<<<< HEAD
 }
 
 footer{
@@ -97,7 +124,4 @@ footer{
     right: 0;
     bottom: 0;
     position: fixed;
-=======
-    
->>>>>>> SeanAboutUs
 }
