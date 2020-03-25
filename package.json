@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/AlinaNBelova/backend_group_project#readme",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.5",
     "dependable": "^1.1.0",
@@ -26,6 +27,7 @@
     "express-session": "^1.17.0",
     "express-validator": "^6.4.0",
     "lodash": "^4.17.15",
+    "mysql2": "^2.1.0",
     "nodemon": "^2.0.2",
     "passport": "^0.4.1",
     "pg": "^7.18.2",
