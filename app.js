@@ -133,7 +133,10 @@ app.post('/transactions', (req, res) => {
     res.json(transactions);
 
 })
-
+app.get('/transactions', (req, res) => {
+    
+    
+})
 
 app.get('/mine', (req, res) => {
 
