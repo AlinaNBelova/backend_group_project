@@ -68,13 +68,24 @@
           </div>
 
           <div class="cont_form_sign_up">
-        <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a>
+        <!-- <a href="#" onclick="ocultar_login_sign_up()"><i class="material-icons">&#xE5C4;</i></a> -->
+        <a href="#" onclick="ocultar_login_sign_up()">X</a>
             <h2>SIGN UP</h2>
-        <input type="text" placeholder="Email" />
-        <input type="text" placeholder="User" />
-        <input type="password" placeholder="Password" />
-        <input type="password" placeholder="Confirm Password" />
-        <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+    
+        <form method="POST" action="/signup">
+          
+          <input type="text" name="email" placeholder="Email" />
+          <input type="text" placeholder="User" />
+          <input type="password" placeholder="Password" />
+          <input type="password" placeholder="Confirm Password" />
+          <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
+        </form>
+        <div class="facebook-google">
+          <a href='https://api.id.me/oauth/authorize?client_id=ca9fda04faffd807bc3d5a3462d0b22f&redirect_uri=https://verify.example.local/callback&response_type=code&scope=military'>
+            <button>Click me</button></a><script src='https://s3.amazonaws.com/idme/developer/idme-buttons/assets/js/idme-wallet-button.js'></script>
+        </div>
+        
+
 
           </div>
         
@@ -87,15 +98,12 @@
     <script
     src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
     crossorigin="anonymous"></script>
-<<<<<<< HEAD
-
+    <script src="../js/signup.js"></script>
     <!-- ***Footer Section*** -->
 
 <footer>  © 2020 BLOCK-22, Org. <br> <i>Powered by Blockchain</i> </footer>
 
-=======
-    <script src="../js/signup.js"></script>
->>>>>>> 6d21848566268bad1956af3a478a17c5f2bba27d
+
 </body>
 
 </html>
