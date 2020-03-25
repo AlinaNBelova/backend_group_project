@@ -1,9 +1,6 @@
 
 const sha256 = require('js-sha256');
 const Block = require('./block');
-const express = require('express')
-const app = express();
-const msgs = require('./app')
 
 
 class Blockchain {
