@@ -9,6 +9,7 @@ const chat = require('http').createServer(app);
 const io = require('socket.io')(chat);
 const models = require('./models');
 const SALT_ROUNDS = 10;
+const bcrypt = require("bcrypt");
 usernames = [];
 
 app.set("view engine", "ejs");
@@ -56,34 +57,23 @@ app.post("/signup",(req,res)=>{
         where:{email: email} })
     .then (results=>{
             console.log(results);
-            if(results==null){
+            if(results){
+                res.status(500).json({massage:"User already exists"});
+            }
+            else{ 
+                console.log("Hashing password...");
+                bcrypt.hash(password, SALT_ROUNDS)
+                .then(hash => {
                     let newUser = models.user.build({
                         email: email,
                         user: user,
-                        password: password
-                    })
+                        password: hash
+                        })
                     console.log(email, user,password)
-                    newUser.save()
-                    .then(savedEmail=>{
-                        if(savedEmail!=null){
-                            res.render('signup')
-                        }
-                        else{
-                            res.render('signup', {message:"User already exists"})
-                            console.log("User already exists1");
-                        }
+                    newUser.save().then(() => res.render("signup")).catch(err => console.error(err))
                     })
-            }else{
-                res.render('signup', {message:"User already exists"})
-                console.log("User already exists2")
-        
             }
-
-                    
-                    
         })
-    
-    // 
     })
 
 
