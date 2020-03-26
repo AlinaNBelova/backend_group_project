@@ -75,9 +75,9 @@
         <input type="text" placeholder="Responder Email" />
         <input type="password" placeholder="Responder Password" />
         <button class="btn_login" onclick="cambiar_login()">LOGIN</button>
-            <h2>Having a crisis?</h2>
-            <p>Talk to someone now, your identity is anonymous</p>
-        <button class="btn_login" onclick="cambiar_login()">Chat Now</button>
+        <span id="idme-wallet-button" data-scope="military,student" data-client-id="ca9fda04faffd807bc3d5a3462d0b22f" data-response="token" data-redirect="https://verify.example.local/callback&response_type=code&scope=military" data-op="signin" data-show-verify="true"></span>
+        <a href='https://api.id.me/oauth/authorize?client_id=ca9fda04faffd807bc3d5a3462d0b22f&redirect_uri=https://verify.example.local/callback&response_type=code&scope=military'>
+        <span id='idme-wallet-button'></span></a><script src='https://s3.amazonaws.com/idme/developer/idme-buttons/assets/js/idme-wallet-button.js'></script>
           </div>
 
           <div class="cont_form_sign_up">
@@ -94,8 +94,6 @@
           <button class="btn_sign_up" onclick="cambiar_sign_up()">SIGN UP</button>
         </form>
         <div class="facebook-google">
-          <a href='https://api.id.me/oauth/authorize?client_id=ca9fda04faffd807bc3d5a3462d0b22f&redirect_uri=https://verify.example.local/callback&response_type=code&scope=military'>
-            <button>Click me</button></a><script src='https://s3.amazonaws.com/idme/developer/idme-buttons/assets/js/idme-wallet-button.js'></script>
         </div>
         
 
@@ -120,7 +118,9 @@
   </div>
 
 </section>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.0.min.js"></script>
 
+<script src="idme.js"></script>
 </body>
 
 </html>
